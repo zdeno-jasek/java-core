@@ -15,7 +15,7 @@ package sk.posam.javacore.market;
  * 
  * Príklady
  * queueTime([5,3,4], 1) -> 12
- * queueTime([10,2,3,3], 2) -> 12
+ * queueTime([10,2,3,3], 2) -> 10
  * queueTime([2,3,10], 2) -> 12
  * 
  * Zákazníci vždy čakajú, kým sa pokladňa uvoľní. Akonáhle sa nejaká uvoľní,
