@@ -3,15 +3,13 @@ package sk.posam.javacore.pin;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
 class ObservedPinTest {
 
-    private final static Comparator<String> comp = (s1, s2) -> s1.compareTo(s2);
-    
     @Test
     void test8() {
     	test( Arrays.asList( "5", "7", "8", "9", "0" ), ObservedPin.getPINs( "8" ) );
@@ -29,8 +27,8 @@ class ObservedPinTest {
     }
 
     private void test( List<String> expected, List<String> result) {
-        result.sort(comp);
-        expected.sort(comp);
+    	Collections.sort(expected);
+    	Collections.sort(result);
         assertEquals(expected, result);
     }
 
