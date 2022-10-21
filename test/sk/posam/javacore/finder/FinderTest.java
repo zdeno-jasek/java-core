@@ -19,7 +19,7 @@ class FinderTest {
 	@Test
 	void testNotSuccess() {
 
-		String b = ".W.\n" + 
+		String b =  ".W.\n" + 
 				    ".W.\n" + 
 					"W..";
 		assertEquals(false, Finder.pathFinder(b));
@@ -36,9 +36,20 @@ class FinderTest {
 		assertEquals(true, Finder.pathFinder(c));
 	}
 	@Test
+	void onePath() {
+
+		String c =  "..W...\n" +
+				    "W.W.W.\n" + 
+				    "..W.W.\n" + 
+				    ".WW.W.\n" + 
+				    "....W.\n" + 
+				    "WWWWW.";
+		assertEquals(true, Finder.pathFinder(c));
+	}
+	@Test
 	void testDeadEnd() {
 
-		String d = "......\n" + 
+		String d =  "......\n" + 
 				    "......\n" + 
 					"......\n" + 
 				    "......\n" + 
